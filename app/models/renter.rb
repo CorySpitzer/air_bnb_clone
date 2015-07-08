@@ -1,3 +1,0 @@
-class Renter < User
-
-end

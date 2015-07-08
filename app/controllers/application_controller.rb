@@ -10,7 +10,7 @@ protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_in) { |params| params.permit(:username, :name, :email) }
     devise_parameter_sanitizer.for(:sign_up) { |params| params.permit(:username, :name, :email, :password) }
-    devise_parameter_sanitizer.for(:account_update) { |params| params.permit(:username, :name, :email) }
+    devise_parameter_sanitizer.for(:account_update) { |params| params.permit(:username, :name, :email, :current_password) }
   end
 
 end
