@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   validates_presence_of :username
   validates_uniqueness_of :username
   validates_presence_of :name
+  validates_inclusion_of :admin, in: [true, false]
 end

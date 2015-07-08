@@ -509,6 +509,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
@@ -585,6 +586,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/app/helpers/application_helper.rb": [
@@ -602,26 +604,16 @@
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/models/admins_spec.rb": [
-        1,
         null,
-        1,
-        1,
-        null
-      ],
-      "/Users/Guest/Desktop/air_bnb_clone/app/models/admin.rb": [
-        1,
+        null,
+        null,
         null,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/models/owners_spec.rb": [
-        1,
         null,
-        1,
-        1,
-        null
-      ],
-      "/Users/Guest/Desktop/air_bnb_clone/app/models/owner.rb": [
-        1,
+        null,
+        null,
         null,
         null
       ],
@@ -641,7 +633,9 @@
         1,
         null,
         1,
-        1,
+        2,
+        2,
+        2,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/app/controllers/users_controller.rb": [
@@ -674,6 +668,6 @@
         null
       ]
     },
-    "timestamp": 1436387843
+    "timestamp": 1436390120
   }
 }

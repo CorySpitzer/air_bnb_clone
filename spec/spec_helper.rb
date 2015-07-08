@@ -100,4 +100,14 @@ def user_validations
   it { should validate_presence_of :username}
   it { should validate_uniqueness_of :username}
   it { should validate_presence_of :name }
+
+  it 'will validate that a user has admin selected as false' do
+    person = FactoryGirl.create :user
+    expect(person.admin).to eq false
+  end
+
+  it 'will validate that an admin has admin selected as true' do
+    person = FactoryGirl.create :user, admin: true
+    expect(person.admin).to eq true
+  end
 end
