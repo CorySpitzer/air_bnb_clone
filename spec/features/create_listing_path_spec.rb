@@ -12,4 +12,13 @@ describe 'the path to create a listing' do
     click_on 'Create Listing'
     expect(page).to have_content 'successfully'
   end
+
+  it 'will not create a listing from a user\'s homepage when given no input' do
+    user = FactoryGirl.create :user
+    login_as user, scope: :user
+    visit user_path user
+    click_on 'Create Listing'
+    expect(page).to have_content 'Try again'
+  end
+
 end
