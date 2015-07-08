@@ -1,4 +1,4 @@
-Rails.application.configure do
+	Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -18,6 +18,9 @@ Rails.application.configure do
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+
+  # For devise setup
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
