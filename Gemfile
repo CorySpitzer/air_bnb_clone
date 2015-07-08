@@ -12,6 +12,7 @@ gem "sass-rails", ">= 3.2"
 gem "bootstrap_form"
 gem "bcrypt", "~> 3.1.5"
 gem "devise"
+gem "paperclip", "~> 4.3"
 
 group :development do
   gem "byebug"
