@@ -1,0 +1,30 @@
+<h3 class="text-center">Current Listings</h3>
+
+<% if @listings %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @listings.each do |listing| %>
+        <tr>
+          <td>
+            <%= link_to listing_path(listing) do %>
+              <%= listing.title %>
+            <% end %>
+          </td>
+          <td><%= listing.description %></td>
+          <td><%= listing.location %></td>
+          <td>$<%= listing.rate %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+<% end %>
