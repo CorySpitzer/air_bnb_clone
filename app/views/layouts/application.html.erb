@@ -12,6 +12,9 @@
       <div class="navbar-header">
         <%= link_to "WaterBnB", root_path, class: "navbar-brand" %>
       </div>
+      <ul class='nav navbar-nav'>
+        <li><%= link_to "View all listings", listings_path %></li>
+      </ul>
       <ul class='nav navbar-nav navbar-right'>
 
         <% if user_signed_in? %>
