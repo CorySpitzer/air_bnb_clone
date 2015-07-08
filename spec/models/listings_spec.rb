@@ -6,6 +6,5 @@ describe Listing do
   it { should validate_presence_of :location}
   it { should validate_presence_of :rate}
 
-  # listing = FactoryGirl.create :listing
-
+  it { should belong_to :user}
 end

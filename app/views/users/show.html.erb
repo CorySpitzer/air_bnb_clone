@@ -1,4 +1,10 @@
 <h1>Hi, <%= current_user.name %></h1>
 
-<%= form_for @listing do |f| %>
-  <!-- <%= f.label : %> -->
+<%= bootstrap_form_for @listing do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :description %>
+  <%= f.text_field :location %>
+  <%= f.number_field :rate %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit %>
+<% end %>

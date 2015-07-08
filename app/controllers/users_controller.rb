@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = ""
+    @listing = Listing.new
   end
 end

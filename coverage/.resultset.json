@@ -1,9 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/air_bnb_clone/spec/features/log_in_path_spec.rb": [
+      "/Users/Guest/Desktop/air_bnb_clone/spec/features/create_listing_path_spec.rb": [
         1,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -21,6 +23,8 @@
         1,
         1,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -530,6 +534,7 @@
         1,
         null,
         1,
+        1,
         null,
         null,
         null,
@@ -596,10 +601,27 @@
         1,
         1,
         1,
+        null,
+        1,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/Guest/Desktop/air_bnb_clone/spec/features/log_in_path_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/features/visit_home_page_spec.rb": [
@@ -621,8 +643,7 @@
         2,
         2,
         null,
-        null,
-        null,
+        2,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/app/models/listing.rb": [
@@ -630,6 +651,8 @@
         1,
         1,
         1,
+        1,
+        null,
         1,
         null,
         null
@@ -641,6 +664,8 @@
         2,
         2,
         2,
+        null,
+        2,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/app/controllers/users_controller.rb": [
@@ -650,7 +675,7 @@
         null,
         null,
         1,
-        null,
+        1,
         null,
         null
       ],
@@ -671,8 +696,35 @@
         null,
         null,
         null
+      ],
+      "/Users/Guest/Desktop/air_bnb_clone/app/controllers/listings_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1436392311
+    "timestamp": 1436394639
   }
 }
