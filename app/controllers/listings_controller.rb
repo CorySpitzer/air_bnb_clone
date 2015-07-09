@@ -11,8 +11,10 @@ class ListingsController < ApplicationController
   end
 
   def create
+    @image = Image.create avatar: params[:listing][:avatar]
     @listing = Listing.new listing_params
     if @listing.save
+      @listing.images.push @image
       flash[:notice] = 'Listing successfully saved'
       redirect_to listing_path @listing
     else
@@ -50,8 +52,10 @@ private
   end
 
   def listing_params
-    params.require(:listing).permit(:title, :description, :rate, :user_id, :location)
+    params.require(:listing).permit(:title, :description, :rate, :user_id, :location, :image)
   end
-
-
+  #
+  # def image_params
+  #   params.require(:image).permit(:avatar)
+  # end
 end

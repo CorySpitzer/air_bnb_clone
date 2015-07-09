@@ -747,6 +747,18 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/air_bnb_clone/spec/features/uploads_an_image_path_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/features/visit_home_page_spec.rb": [
         1,
         null,
@@ -905,6 +917,7 @@
         1,
         2,
         2,
+        2,
         1,
         1,
         null,
@@ -1000,6 +1013,6 @@
         null
       ]
     },
-    "timestamp": 1436477857
+    "timestamp": 1436478738
   }
 }
