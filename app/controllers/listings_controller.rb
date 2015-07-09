@@ -35,6 +35,14 @@ class ListingsController < ApplicationController
     end
   end
 
+  def destroy
+    # we already have @listing here
+    @user = @listing.user
+    @listing.destroy
+    flash[:notice] = 'Listing deleted'
+    redirect_to user_path @user
+  end
+
 private
 
   def set_listing

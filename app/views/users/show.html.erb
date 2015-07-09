@@ -5,7 +5,7 @@
     <p class="lead">Your current listings:</p>
     <ul>
       <% current_user.listings.each do |listing| %>
-        <li><%= listing.title %></li>
+        <li><%= listing.title %><%= link_to 'Delete', listing_path(listing), {confirm: 'Are you sure?', method: 'delete'} %></li> 
       <% end %>
     </ul>
   <% else %>

@@ -618,6 +618,21 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/air_bnb_clone/spec/features/delete_listing_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/features/edit_listing_path_spec.rb": [
         1,
         null,
@@ -719,7 +734,7 @@
         null,
         null,
         1,
-        3,
+        5,
         null,
         null
       ],
@@ -782,7 +797,15 @@
         1,
         null,
         1,
-        6,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        7,
         null,
         null,
         1,
@@ -793,6 +816,6 @@
         null
       ]
     },
-    "timestamp": 1436459911
+    "timestamp": 1436460812
   }
 }
