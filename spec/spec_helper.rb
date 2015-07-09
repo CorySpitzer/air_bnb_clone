@@ -17,8 +17,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-def create_and_login_user
-  user = FactoryGirl.create :user
+def create_and_login_user name = :user
+  user = FactoryGirl.create name
   login_as user, scope: :user
   user
 end
@@ -27,6 +27,14 @@ def create_listing_and_to_user user
   listing = FactoryGirl.create :listing
   user.listings.push listing
   listing
+end
+
+def fill_in_listing_form
+  listing_attr = FactoryGirl.attributes_for(:listing)
+  fill_in 'Title', with: listing_attr[:title]
+  fill_in 'Description', with: listing_attr[:description]
+  fill_in 'Location', with: listing_attr[:location]
+  fill_in 'Rate', with: listing_attr[:rate]
 end
 
 require 'simplecov'

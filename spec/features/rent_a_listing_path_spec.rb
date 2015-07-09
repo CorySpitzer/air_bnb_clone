@@ -5,8 +5,7 @@ describe 'the rent a listing path' do
     user = create_and_login_user
     listing = create_listing_and_to_user user
     logout
-    user2 = FactoryGirl.create :user, name: 'b', username: 'b1', email: 'b@b.com', password: '123456789', admin: false
-    login_as user2, scope: :user
+    user2 = create_and_login_user :user2
     visit listing_path listing
     fill_in 'Start date', with: Date.new(2015, 02, 02)
     fill_in 'End date', with: Date.new(2015, 02, 03)
@@ -18,8 +17,7 @@ describe 'the rent a listing path' do
     user = create_and_login_user
     listing = create_listing_and_to_user user
     logout
-    user2 = FactoryGirl.create :user, name: 'b', username: 'b1', email: 'b@b.com', password: '123456789', admin: false
-    login_as user2, scope: :user
+    user2 = create_and_login_user :user2
     visit listing_path listing
     fill_in 'End date', with: Date.new(2015, 02, 03)
     click_on 'Rent'

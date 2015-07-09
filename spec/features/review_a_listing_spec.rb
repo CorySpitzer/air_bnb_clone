@@ -5,8 +5,7 @@ describe 'adding a review to a listing' do
     user = create_and_login_user
     listing = create_listing_and_to_user user
     logout
-    user2 = FactoryGirl.create :user, name: 'b', username: 'b1', email: 'b@b.com', password: '123456789', admin: false
-    login_as user2, scope: :user
+    user2 = create_and_login_user :user2
     visit listing_path listing
     click_on 'Review'
     fill_in 'Content', with: 'Our stay here was great!'

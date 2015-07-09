@@ -6,10 +6,7 @@ describe 'the edit listing path' do
     listing = create_listing_and_to_user user
     visit listings_path
     click_on 'Edit'
-    fill_in 'Title', with: 'The Floating House'
-    fill_in 'Description', with: 'It floats'
-    fill_in 'Location', with: 'The Ocean'
-    fill_in 'Rate', with: '45'
+    fill_in_listing_form
     click_on 'Update Listing'
     expect(page).to have_content 'saved'
   end
@@ -19,10 +16,8 @@ describe 'the edit listing path' do
     listing = create_listing_and_to_user user
     visit listings_path
     click_on 'Edit'
-    fill_in 'Title', with: 'The Floating House'
+    fill_in_listing_form
     fill_in 'Description', with: ''
-    fill_in 'Location', with: 'The Ocean'
-    fill_in 'Rate', with: '45'
     click_on 'Update Listing'
     expect(page).to have_content 'error'
   end
