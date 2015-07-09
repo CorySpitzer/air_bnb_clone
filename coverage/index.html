@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-09T16:12:32-07:00">2015-07-09T16:12:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-09T16:17:00-07:00">2015-07-09T16:17:00-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.4%</span></span>
+    (<span class="covered_percent"><span class="green">99.39%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>41</b> files in total.
-    <b>332</b> relevant lines. 
-    <span class="green"><b>330</b> lines covered</span> and
+    <b>326</b> relevant lines. 
+    <span class="green"><b>324</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -313,9 +313,9 @@
       <tr>
         <td class="strong"><a href="#904da5b267d8b8458819001785d9b9238e781306" class="src_link" title="spec/features/delete_listing_spec.rb">spec/features/delete_listing_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>9</td>
-        <td>9</td>
+        <td>11</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -323,9 +323,9 @@
       <tr>
         <td class="strong"><a href="#028de6cf7cc58338cbb75f004a4643887348149d" class="src_link" title="spec/features/edit_listing_path_spec.rb">spec/features/edit_listing_path_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>31</td>
-        <td>26</td>
-        <td>26</td>
+        <td>29</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -343,9 +343,9 @@
       <tr>
         <td class="strong"><a href="#139e63a57a3dd949b2b1d95827021fdbfca2dcec" class="src_link" title="spec/features/rent_a_listing_path_spec.rb">spec/features/rent_a_listing_path_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>25</td>
-        <td>25</td>
+        <td>28</td>
+        <td>23</td>
+        <td>23</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -353,9 +353,9 @@
       <tr>
         <td class="strong"><a href="#3fb36d18595cb5f6633602eef800fc22d78d8ce3" class="src_link" title="spec/features/review_a_listing_spec.rb">spec/features/review_a_listing_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>14</td>
-        <td>14</td>
+        <td>16</td>
+        <td>13</td>
+        <td>13</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -5047,8 +5047,8 @@
     <h3>spec/features/delete_listing_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5089,40 +5089,34 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    listing = FactoryGirl.create :listing</code>
+          <code class="ruby">    listing = create_listing_and_to_user user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    user.listings.push listing</code>
+          <code class="ruby">    visit user_path user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit user_path user</code>
+          <code class="ruby">    click_on &#39;Delete&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Delete&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
           <code class="ruby">    expect(page).to_not have_content listing.title</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -5137,8 +5131,8 @@
     <h3>spec/features/edit_listing_path_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>26</b> lines covered</span> and
+      <b>24</b> relevant lines. 
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5179,154 +5173,142 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    listing = FactoryGirl.create :listing</code>
+          <code class="ruby">    listing = create_listing_and_to_user user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    user.listings.push listing</code>
+          <code class="ruby">    visit listings_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit listings_path</code>
+          <code class="ruby">    click_on &#39;Edit&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Edit&#39;</code>
+          <code class="ruby">    fill_in &#39;Title&#39;, with: &#39;The Floating House&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Title&#39;, with: &#39;The Floating House&#39;</code>
+          <code class="ruby">    fill_in &#39;Description&#39;, with: &#39;It floats&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Description&#39;, with: &#39;It floats&#39;</code>
+          <code class="ruby">    fill_in &#39;Location&#39;, with: &#39;The Ocean&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Location&#39;, with: &#39;The Ocean&#39;</code>
+          <code class="ruby">    fill_in &#39;Rate&#39;, with: &#39;45&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Rate&#39;, with: &#39;45&#39;</code>
+          <code class="ruby">    click_on &#39;Update Listing&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Update Listing&#39;</code>
+          <code class="ruby">    expect(page).to have_content &#39;saved&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">    expect(page).to have_content &#39;saved&#39;</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  it &#39;fails to edit a listing&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">    user = create_and_login_user</code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    listing = create_listing_and_to_user user</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    listing = FactoryGirl.create :listing</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    user.listings.push listing</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">    visit listings_path</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">    click_on &#39;Edit&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;Title&#39;, with: &#39;The Floating House&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;Description&#39;, with: &#39;&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;Location&#39;, with: &#39;The Ocean&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;Rate&#39;, with: &#39;45&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">    click_on &#39;Update Listing&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).to have_content &#39;error&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
@@ -5437,8 +5419,8 @@
     <h3>spec/features/rent_a_listing_path_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>23</b> relevant lines. 
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5479,148 +5461,136 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    listing = FactoryGirl.create :listing</code>
+          <code class="ruby">    listing = create_listing_and_to_user user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    user.listings.push listing</code>
+          <code class="ruby">    logout</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    logout</code>
+          <code class="ruby">    user2 = FactoryGirl.create :user, name: &#39;b&#39;, username: &#39;b1&#39;, email: &#39;b@b.com&#39;, password: &#39;123456789&#39;, admin: false</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    user2 = FactoryGirl.create :user, name: &#39;b&#39;, username: &#39;b1&#39;, email: &#39;b@b.com&#39;, password: &#39;123456789&#39;, admin: false</code>
+          <code class="ruby">    login_as user2, scope: :user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    login_as user2, scope: :user</code>
+          <code class="ruby">    visit listing_path listing</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit listing_path listing</code>
+          <code class="ruby">    fill_in &#39;Start date&#39;, with: Date.new(2015, 02, 02)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Start date&#39;, with: Date.new(2015, 02, 02)</code>
+          <code class="ruby">    fill_in &#39;End date&#39;, with: Date.new(2015, 02, 03)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;End date&#39;, with: Date.new(2015, 02, 03)</code>
+          <code class="ruby">    click_on &#39;Rent&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Rent&#39;</code>
+          <code class="ruby">    expect(page).to have_content &#39;Rental dates&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">    expect(page).to have_content &#39;Rental dates&#39;</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  it &#39;will fail letting a user rent a listing&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">    user = create_and_login_user</code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    listing = create_listing_and_to_user user</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    listing = FactoryGirl.create :listing</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    user.listings.push listing</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">    logout</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">    user2 = FactoryGirl.create :user, name: &#39;b&#39;, username: &#39;b1&#39;, email: &#39;b@b.com&#39;, password: &#39;123456789&#39;, admin: false</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">    login_as user2, scope: :user</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">    visit listing_path listing</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;End date&#39;, with: Date.new(2015, 02, 03)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">    click_on &#39;Rent&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).to have_content &#39;try again&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
@@ -5635,8 +5605,8 @@
     <h3>spec/features/review_a_listing_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5677,70 +5647,64 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    listing = FactoryGirl.create :listing</code>
+          <code class="ruby">    listing = create_listing_and_to_user user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    user.listings.push listing</code>
+          <code class="ruby">    logout</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    logout</code>
+          <code class="ruby">    user2 = FactoryGirl.create :user, name: &#39;b&#39;, username: &#39;b1&#39;, email: &#39;b@b.com&#39;, password: &#39;123456789&#39;, admin: false</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    user2 = FactoryGirl.create :user, name: &#39;b&#39;, username: &#39;b1&#39;, email: &#39;b@b.com&#39;, password: &#39;123456789&#39;, admin: false</code>
+          <code class="ruby">    login_as user2, scope: :user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    login_as user2, scope: :user</code>
+          <code class="ruby">    visit listing_path listing</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit listing_path listing</code>
+          <code class="ruby">    click_on &#39;Review&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Review&#39;</code>
+          <code class="ruby">    fill_in &#39;Content&#39;, with: &#39;Our stay here was great!&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Content&#39;, with: &#39;Our stay here was great!&#39;</code>
+          <code class="ruby">    select 5, from: &quot;Rating&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    select 5, from: &quot;Rating&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
           <code class="ruby">    click_on &#39;Create Review&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>

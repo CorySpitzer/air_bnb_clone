@@ -23,6 +23,12 @@ def create_and_login_user
   user
 end
 
+def create_listing_and_to_user user
+  listing = FactoryGirl.create :listing
+  user.listings.push listing
+  listing
+end
+
 require 'simplecov'
 require "paperclip/matchers"
 

@@ -3,8 +3,7 @@ require 'rails_helper'
 describe 'the edit listing path' do
   it 'edits a listing' do
     user = create_and_login_user
-    listing = FactoryGirl.create :listing
-    user.listings.push listing
+    listing = create_listing_and_to_user user
     visit listings_path
     click_on 'Edit'
     fill_in 'Title', with: 'The Floating House'
@@ -17,8 +16,7 @@ describe 'the edit listing path' do
 
   it 'fails to edit a listing' do
     user = create_and_login_user
-    listing = FactoryGirl.create :listing
-    user.listings.push listing
+    listing = create_listing_and_to_user user
     visit listings_path
     click_on 'Edit'
     fill_in 'Title', with: 'The Floating House'

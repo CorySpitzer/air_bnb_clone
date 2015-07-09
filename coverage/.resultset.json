@@ -637,7 +637,6 @@
         1,
         1,
         1,
-        1,
         null,
         null
       ],
@@ -656,10 +655,8 @@
         1,
         1,
         1,
-        1,
         null,
         null,
-        1,
         1,
         1,
         1,
@@ -704,10 +701,8 @@
         1,
         1,
         1,
-        1,
         null,
         null,
-        1,
         1,
         1,
         1,
@@ -724,7 +719,6 @@
       "/Users/Guest/Desktop/air_bnb_clone/spec/features/review_a_listing_spec.rb": [
         1,
         null,
-        1,
         1,
         1,
         1,
@@ -1009,6 +1003,6 @@
         null
       ]
     },
-    "timestamp": 1436483552
+    "timestamp": 1436483820
   }
 }
