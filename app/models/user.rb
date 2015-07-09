@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
 
   has_many :images, as: :imageable
 
+  has_many :reviews
+
+  has_many :reservations
+  #See http://stackoverflow.com/questions/18690700/multiple-has-many-relationships-to-same-model
+  has_many :reserved_listings, through: :reservations
 end
