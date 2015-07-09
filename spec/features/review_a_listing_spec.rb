@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe 'adding a review to a listing' do
   it 'will add a review to a listing' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     listing = FactoryGirl.create :listing
     user.listings.push listing
     logout

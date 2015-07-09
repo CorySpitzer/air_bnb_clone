@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe 'the delete listing path' do
   it 'deletes a listing' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     listing = FactoryGirl.create :listing
     user.listings.push listing
     visit user_path user

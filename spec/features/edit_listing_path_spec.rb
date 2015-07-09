@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe 'the edit listing path' do
   it 'edits a listing' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     listing = FactoryGirl.create :listing
     user.listings.push listing
     visit listings_path
@@ -17,8 +16,7 @@ describe 'the edit listing path' do
   end
 
   it 'fails to edit a listing' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     listing = FactoryGirl.create :listing
     user.listings.push listing
     visit listings_path

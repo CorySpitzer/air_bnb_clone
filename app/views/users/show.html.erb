@@ -3,9 +3,11 @@
 <div class="col-md-6">
   <% if current_user.listings %>
     <p class="lead">Your current listings:</p>
-    <ul>
+    <ul class="list-group">
       <% current_user.listings.each do |listing| %>
-        <li><%= listing.title %><%= link_to 'Delete', listing_path(listing), {confirm: 'Are you sure?', method: 'delete'} %></li> 
+        <li class="list-group-item"><%= listing.title %>
+        <span class="pull-right"><%= link_to ' Delete', listing_path(listing), data: {confirm: 'Are you sure?', method: 'delete'} %> | 
+        <%= link_to 'Edit', edit_listing_path(listing) %></span></li>
       <% end %>
     </ul>
   <% else %>

@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe 'the rent a listing path' do
   it 'lets a user rent a listing' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     listing = FactoryGirl.create :listing
     user.listings.push listing
     logout
@@ -17,8 +16,7 @@ describe 'the rent a listing path' do
   end
 
   it 'will fail letting a user rent a listing' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     listing = FactoryGirl.create :listing
     user.listings.push listing
     logout

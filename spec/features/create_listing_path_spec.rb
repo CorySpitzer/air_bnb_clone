@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe 'the path to create a listing' do
   it 'will create a listing from a user\'s homepage' do
-    user = FactoryGirl.create :user
-    login_as user, scope: :user
+    user = create_and_login_user
     visit user_path user
     fill_in 'Title', with: 'The Floating House'
     fill_in 'Description', with: 'It floats'

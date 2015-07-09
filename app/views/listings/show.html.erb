@@ -1,12 +1,12 @@
 <div class="row">
   <!-- images -->
-  <div class="col-md-6">
-    <% if @listing.images %>
+  <% if @listing.images.any? %>
+    <div class="col-md-6">
       <% @listing.images.each do |image| %>
         <%= image_tag image.avatar.url(:medium), class: "img-responsive img-rounded"%>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 
   <!-- description -->
   <div class="col-md-6">
@@ -16,19 +16,21 @@
     <h4 class="text-center"> <%= @listing.location %></h4>
     <p class="lead"><%= @listing.description %></p>
     <br>
-    <%= bootstrap_form_for @reservation do |f| %>
-      <%= f.date_field :start_date %>
-      <%= f.date_field :end_date %>
-      <%= f.hidden_field :listing_id, value: @listing.id %>
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.submit "Rent", class: "btn btn-info btn-block" %>
-    <% end %>
-    <br>
+    <% if current_user %>
+      <%= bootstrap_form_for @reservation do |f| %>
+        <%= f.date_field :start_date %>
+        <%= f.date_field :end_date %>
+        <%= f.hidden_field :listing_id, value: @listing.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit "Rent", class: "btn btn-info btn-block" %>
+      <% end %>
+      <br>
 
-    <!-- Review/Reviews -->
-    <!-- Pass in :listing_id to url so that it is available in the params -->
-    <%= link_to 'Review', new_review_path(listing_id: @listing.id), class: "btn btn-default btn-block" %>
-    <br>
+      <!-- Review/Reviews -->
+      <!-- Pass in :listing_id to url so that it is available in the params -->
+      <%= link_to 'Review', new_review_path(listing_id: @listing.id), class: "btn btn-default btn-block" %>
+      <br>
+    <% end %>
 
     <% if @listing.reviews %>
       <% @listing.reviews.each do |review| %>

@@ -17,6 +17,12 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+def create_and_login_user
+  user = FactoryGirl.create :user
+  login_as user, scope: :user
+  user
+end
+
 require 'simplecov'
 require "paperclip/matchers"
 
