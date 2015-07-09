@@ -613,6 +613,7 @@
         1,
         null,
         1,
+        1,
         null,
         1,
         null,
@@ -722,6 +723,15 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/air_bnb_clone/spec/features/review_a_listing_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/features/visit_home_page_spec.rb": [
         1,
         null,
@@ -743,6 +753,8 @@
         null,
         2,
         2,
+        null,
+        2,
         null
       ],
       "/Users/Guest/Desktop/air_bnb_clone/app/models/listing.rb": [
@@ -752,6 +764,7 @@
         1,
         1,
         null,
+        1,
         1,
         null,
         1,
@@ -777,6 +790,28 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/air_bnb_clone/spec/models/reviews_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/air_bnb_clone/app/models/review.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/air_bnb_clone/spec/models/users_spec.rb": [
         1,
         null,
@@ -785,6 +820,7 @@
         2,
         2,
         null,
+        2,
         2,
         2,
         null
@@ -901,6 +937,6 @@
         null
       ]
     },
-    "timestamp": 1436467089
+    "timestamp": 1436468205
   }
 }

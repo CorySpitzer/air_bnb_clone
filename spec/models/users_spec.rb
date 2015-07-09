@@ -7,4 +7,5 @@ describe User do
 
   it { should have_many :listings}
   it { should have_many :reservations }
+  it { should have_many :reviews}
 end

@@ -8,4 +8,6 @@ describe Listing do
 
   it { should belong_to :user}
   it { should have_many :reservations }
+
+  it { should have_many :reviews}
 end
