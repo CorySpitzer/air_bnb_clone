@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   validates_presence_of :name
 
   has_many :listings
+
+  has_many :reservations
+  #See http://stackoverflow.com/questions/18690700/multiple-has-many-relationships-to-same-model
+  has_many :reserved_listings, through: :reservations
 end
